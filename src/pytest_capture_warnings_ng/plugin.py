@@ -1,19 +1,31 @@
 import pytest
-
+import pdb
 
 def pytest_addoption(parser):
-    group = parser.getgroup('capture-warnings-ng')
-    group.addoption(
-        '--foo',
-        action='store',
-        dest='dest_foo',
-        default='2024',
-        help='Set the value for the fixture "bar".'
-    )
+    parser.addoption("--warnings-output-file", action='store', default="test_warnings.txt")
 
-    parser.addini('HELLO', 'Dummy pytest.ini setting')
+def warnings_output_file(config):
+    return config.getoption("--warnings-output-file")
+    
+#@pytest.hookimpl(tryfirst=True, hookwrapper=True)
+def pytest_terminal_summary(terminalreporter, config):
+    output_file = warnings_output_file(config)
+    stats_warnings = terminalreporter.stats.get('warnings', [])
+    if len(stats_warnings) == 0: 
+        print(f"No warnings to write.")
+    if len(stats_warnings) > 0:
+        with open(output_file, "w") as f:
+            for w in stats_warnings:
+                location = ":".join(map(str, w.fslocation))
+                if(w.message[len(location):] == location):
+                    message = w.message[len(location)+2:]
+                else:
+                    message = w.message
+                message = f"{w.nodeid}: {w.message}".replace("\n", " ")
+                f.write(f"{message}\n")
+        print(f"Total warnings written to {output_file}: {len(stats_warnings)}")
 
-
-@pytest.fixture
-def bar(request):
-    return request.config.option.dest_foo
+#def pytest_collectreport(report):
+#    pdb.set_trace()
+#    print("COLLECT REPORT")
+#    print(report)
