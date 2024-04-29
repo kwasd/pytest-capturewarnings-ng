@@ -1,0 +1,43 @@
+[build-system]
+requires = [
+  "setuptools>=61.0.0",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pytest-capture-warnings-ng"
+description = "A simple xdist compatible plugin to capture warnings into report file"
+version = "0.1.0"
+readme = "README.rst"
+requires-python = ">=3.8"
+authors = [
+    { name = "Vadim Musin", email = "wasd94@gmail.com" },
+]
+maintainers = [
+    { name = "Vadim Musin", email = "wasd94@gmail.com" },
+]
+license = {file = "LICENSE"}
+classifiers = [
+    "Framework :: Pytest",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Testing",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "License :: OSI Approved :: Apache Software License",
+]
+dependencies = [
+    "pytest>=8.1.1",
+]
+[project.urls]
+Repository = "https://github.com/kwasd/pytest-capture-warnings-ng"
+[project.entry-points.pytest11]
+capture-warnings-ng = "pytest_capture_warnings_ng.plugin"
