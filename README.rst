@@ -39,7 +39,7 @@ You can install "pytest-capture-warnings-ng" via `pip`_ from `PyPI`_::
 Usage
 -----
 
-Try `--help` to see new option:
+Try `--help` to see a new option::
 
   --warnings-output-file=WARNINGS_OUTPUT_FILE
                         Report file to write warnings to (defaults to
