@@ -40,9 +40,11 @@ Usage
 -----
 
 ```
+
   --warnings-output-file=WARNINGS_OUTPUT_FILE
                         Report file to write warnings to (defaults to
                         test_warnings.txt)
+
 ```
 
 Contributing
