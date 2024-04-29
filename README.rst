@@ -14,23 +14,18 @@ pytest-capture-warnings-ng
     :target: https://github.com/kwasd/pytest-capture-warnings-ng/actions/workflows/main.yml
     :alt: See Build Status on GitHub Actions
 
-A simple xdist compatible plugin to capture warnings into report file
+A simple xdist compatible plugin to capture warnings into a report file
 
 ----
 
-This `pytest`_ plugin was generated with `Cookiecutter`_ along with `@hackebrot`_'s `cookiecutter-pytest-plugin`_ template.
-
-
 Features
 --------
-
-* TODO
 
 
 Requirements
 ------------
 
-* TODO
+* `pytest`
 
 
 Installation
@@ -38,13 +33,17 @@ Installation
 
 You can install "pytest-capture-warnings-ng" via `pip`_ from `PyPI`_::
 
-    $ pip install pytest-capture-warnings-ng
+    $ pip install https://github.com/kwasd/pytest-capturewarnings-ng
 
 
 Usage
 -----
 
-* TODO
+```
+  --warnings-output-file=WARNINGS_OUTPUT_FILE
+                        Report file to write warnings to (defaults to
+                        test_warnings.txt)
+```
 
 Contributing
 ------------

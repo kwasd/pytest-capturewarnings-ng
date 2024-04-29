@@ -2,7 +2,8 @@ import pytest
 import pdb
 
 def pytest_addoption(parser):
-    parser.addoption("--warnings-output-file", action='store', default="test_warnings.txt")
+    parser.addoption("--warnings-output-file", action='store', default="test_warnings.txt", 
+                     help="Report file to write warnings to (defaults to test_warnings.txt)")
 
 def warnings_output_file(config):
     return config.getoption("--warnings-output-file")
