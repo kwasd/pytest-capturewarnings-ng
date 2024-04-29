@@ -39,15 +39,17 @@ You can install "pytest-capture-warnings-ng" via `pip`_ from `PyPI`_::
 Usage
 -----
 
+Try `--help` to see new option:
+
   --warnings-output-file=WARNINGS_OUTPUT_FILE
                         Report file to write warnings to (defaults to
                         test_warnings.txt)
 
-The output is written to report file:
+The output is written to report file::
 
     <NODE>: <FSLOCATION>: <WARNING>
 
-Example:
+Example::
 
     test_run_with_warnings.py::test_hello_world_1: /tmp/pytest-of-vmusin/pytest-38/popen-gw0/test_run_with_warnings0/test_run_with_warnings.py:5: UserWarning: hello 1 world   warnings.warn('hello 1 world') 
 
