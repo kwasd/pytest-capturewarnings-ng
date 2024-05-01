@@ -17,12 +17,8 @@ def pytest_terminal_summary(terminalreporter, config):
     if len(stats_warnings) > 0:
         with open(output_file, "w") as f:
             for w in stats_warnings:
-                location = ":".join(map(str, w.fslocation))
-                if(w.message[len(location):] == location):
-                    message = w.message[len(location)+2:]
-                else:
-                    message = w.message
-                message = f"{w.nodeid}: {w.message}".replace("\n", " ")
+                #location = ":".join(map(str, w.fslocation))
+                message = " @ ".join([w.nodeid, w.message]).replace("\n", " ")
                 f.write(f"{message}\n")
         print(f"Total warnings written to {output_file}: {len(stats_warnings)}")
 

@@ -1,5 +1,5 @@
 
-WARNINGS_FOUND_LINE = '*Total warnings written to test_warnings.txt: 2*'
+TWO_WARNINGS_FOUND_LINE = '*Total warnings written to test_warnings.txt: 2*'
 WARNINGS_NOT_FOUND_LINE = '*No warnings to write.*'
 
 # def test_help_message(pytester):
@@ -29,7 +29,7 @@ def test_run_with_warnings(pytester):
 
     # fnmatch_lines does an assertion internally
     result.stdout.fnmatch_lines([
-        WARNINGS_FOUND_LINE,
+        TWO_WARNINGS_FOUND_LINE,
     ])
 
     # make sure that we get a '0' exit code for the testsuite
@@ -73,7 +73,7 @@ def test_run_xdist_with_warnings(pytester):
 
     # fnmatch_lines does an assertion internally
     result.stdout.fnmatch_lines([
-        WARNINGS_FOUND_LINE,
+        TWO_WARNINGS_FOUND_LINE,
     ])
 
     # make sure that we get a '0' exit code for the testsuite
