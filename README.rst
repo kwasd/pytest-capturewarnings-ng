@@ -2,8 +2,8 @@
 pytest-capture-warnings-ng
 ==========================
 
-.. image:: https://github.com/kwasd/pytest-capture-warnings-ng/actions/workflows/main.yml/badge.svg
-    :target: https://github.com/kwasd/pytest-capture-warnings-ng/actions/workflows/main.yml
+.. image:: https://github.com/kwasd/pytest-capture-warnings-ng/actions/workflows/test.yml/badge.svg
+    :target: https://github.com/kwasd/pytest-capture-warnings-ng/actions/workflows/test.yml
     :alt: See Build Status on GitHub Actions
 
 A simple xdist compatible plugin to capture warnings into a report file
