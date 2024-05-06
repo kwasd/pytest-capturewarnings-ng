@@ -1,4 +1,4 @@
-name: Test plugin
+name: Test the plugin
 
 on:
   workflow_dispatch:
@@ -12,6 +12,7 @@ jobs:
         xdist_version: [3.6.1]
         pytest_version: [8.1.1]
     name: Test against Python and xdist
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
