@@ -8,7 +8,7 @@ jobs:
   test:
     strategy:
       matrix:
-        python_version: [3.10, 3.11, 3.12]
+        python_version: ["3.10", "3.11", "3.12"]
         xdist_version: [3.6.1]
         pytest_version: [8.1.1]
     name: Test against Python and xdist
