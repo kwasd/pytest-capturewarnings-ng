@@ -18,5 +18,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '${{ matrix.python_version }}'
-      - run: pip install '${{ matrix.xdist_version }}' '${{ matrix.pytest_version }}' .
-      - run: pytest tests
+      - run: pip install pytest-xdist=='${{ matrix.xdist_version }}' pytest=='${{ matrix.pytest_version }}' .
+      - run: pytest tests -v
