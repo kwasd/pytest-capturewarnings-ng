@@ -2,8 +2,8 @@
 pytest-capture-warnings-ng
 ==========================
 
-.. image:: https://github.com/kwasd/pytest-capture-warnings-ng/actions/workflows/test.yml/badge.svg
-    :target: https://github.com/kwasd/pytest-capture-warnings-ng/actions/workflows/test.yml
+.. image:: https://github.com/kwasd/pytest-capturewarnings-ng/actions/workflows/test.yml/badge.svg
+    :target: https://github.com/kwasd/pytest-capturewarnings-ng/actions/workflows/test.yml
     :alt: See Build Status on GitHub Actions
 
 A simple xdist compatible plugin to capture warnings into a report file
@@ -27,7 +27,7 @@ Requirements
 Installation
 ------------
 
-You can install "pytest-capture-warnings-ng" via `pip`_ from `PyPI`_::
+You can install "pytest-capturewarnings-ng" via `pip`_ from `PyPI`_::
 
     $ pip install git+https://github.com/kwasd/pytest-capturewarnings-ng.git@v1.0
 
@@ -70,7 +70,7 @@ Issues
 If you encounter any problems, please `file an issue`_ along with a detailed description.
 
 .. _`Apache Software License 2.0`: https://www.apache.org/licenses/LICENSE-2.0
-.. _`file an issue`: https://github.com/kwasd/pytest-capture-warnings-ng/issues
+.. _`file an issue`: https://github.com/kwasd/pytest-capturewarnings-ng/issues
 .. _`pytest`: https://github.com/pytest-dev/pytest
 .. _`tox`: https://tox.readthedocs.io/en/latest/
 .. _`pip`: https://pypi.org/project/pip/
