@@ -55,7 +55,7 @@ Example::
 
 Contributing
 ------------
-Contributions are very welcome. Tests can be run with `tox`_, please ensure
+Contributions are very welcome. Tests can be run with `pytest`_, please ensure
 the coverage at least stays the same before you submit a pull request.
 
 License
