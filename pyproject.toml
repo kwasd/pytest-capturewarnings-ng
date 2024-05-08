@@ -5,7 +5,7 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "pytest-capture-warnings-ng"
+name = "pytest-capturewarnings-ng"
 description = "A simple xdist compatible plugin to capture warnings into report file"
 version = "0.1.0"
 readme = "README.rst"
@@ -38,6 +38,6 @@ dependencies = [
     "pytest>=8.1.1",
 ]
 [project.urls]
-Repository = "https://github.com/kwasd/pytest-capture-warnings-ng"
+Repository = "https://github.com/kwasd/pytest-capturewarnings-ng"
 [project.entry-points.pytest11]
-capture-warnings-ng = "pytest_capture_warnings_ng.plugin"
+capturewarnings-ng = "pytest_capturewarnings_ng.plugin"

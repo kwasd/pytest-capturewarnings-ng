@@ -37,7 +37,7 @@ Usage
 
 Try `--help` to see a new option::
 
-  --warnings-output-file=WARNINGS_OUTPUT_FILE
+  --warnings-output-file WARNINGS_OUTPUT_FILE
                         Report file to write warnings to (defaults to
                         test_warnings.txt)
 
