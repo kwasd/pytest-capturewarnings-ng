@@ -7,7 +7,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "pytest-capturewarnings-ng"
 description = "A simple xdist compatible plugin to capture warnings into report file"
-version = "v1.1.1"
+version = "v1.2.0"
 readme = "README.rst"
 requires-python = ">=3.8"
 authors = [

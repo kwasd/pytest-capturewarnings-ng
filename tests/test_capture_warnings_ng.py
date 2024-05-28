@@ -1,4 +1,4 @@
-
+from pathlib import Path
 WARNINGS_FOUND_LINE = '*Total warnings written to test_warnings.txt: 32*'
 WARNINGS_NOT_FOUND_LINE = '*No warnings to write.*'
 
@@ -41,6 +41,20 @@ def test_run_with_warnings_xdist(pytester):
 
     assert result.ret == 0
 
+def test_run_with_json(pytester):
+    pytester.makepyfile(PYFILE_WITH_WARNINGS)
+    result = pytester.runpytest('-v', '--warnings-json-output-file', 'output.json')
+
+    import json
+    j = json.loads(open(pytester.path.joinpath(('output.json'))).read())
+
+    result.stdout.fnmatch_lines([
+        WARNINGS_FOUND_LINE,
+    ])
+
+    assert len(j) == 32
+
+    assert result.ret == 0
 
 def test_run_without_warnings(pytester):
     pytester.makepyfile(PYFILE_WITHOUT_WARNINGS)

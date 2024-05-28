@@ -1,5 +1,5 @@
 ==========================
-pytest-capture-warnings-ng
+pytest-capturewarnings-ng
 ==========================
 
 .. image:: https://github.com/kwasd/pytest-capturewarnings-ng/actions/workflows/test.yml/badge.svg

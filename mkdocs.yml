@@ -1,10 +1,10 @@
-site_name: pytest-capture-warnings-ng
+site_name: pytest-capturewarnings-ng
 site_description: A simple xdist compatible plugin to capture warnings into report file
 site_author: Vadim Musin
 
 theme: readthedocs
 
-repo_url: https://github.com/kwasd/pytest-capture-warnings-ng
+repo_url: https://github.com/kwasd/pytest-capturewarnings-ng
 
 pages:
 - Home: index.md
