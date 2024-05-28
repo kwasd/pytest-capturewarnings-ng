@@ -9,8 +9,8 @@ jobs:
     strategy:
       matrix:
         python_version: ["3.10", "3.11", "3.12"]
-        xdist_version: [3.6.1]
-        pytest_version: [8.1.1]
+        xdist_version: [3.6.1, "latest"]
+        pytest_version: [8.1.1, "latest"]
     name: Test against Python and xdist
     runs-on: ubuntu-latest
     steps:
@@ -18,5 +18,16 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '${{ matrix.python_version }}'
-      - run: pip install pytest-xdist=='${{ matrix.xdist_version }}' pytest=='${{ matrix.pytest_version }}' .
+      - run: |
+          if [[ ${{ matrix.xdist_version }} == latest ]]; then
+            pip install pytest-xdist
+          else
+            pip install pytest-xdist=='${{ matrix.xdist_version }}'
+          fi
+          if [[ ${{ matrix.pytest_version }} == latest ]]; then
+            pip install pytest
+          else
+            pip install pytest=='${{ matrix.pytest_version }}' 
+          fi
+      - run: pip install .
       - run: pytest tests -v
